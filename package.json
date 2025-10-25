@@ -1,0 +1,25 @@
+{
+	"name": "parsnip-blocks",
+	"version": "0.1.0",
+	"description": "Example block scaffolded with Create Block tool.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"tw:build": "tailwindcss -i src/tw.css -o build/shared.css && tailwindcss -i src/tw-editor.css -o build/shared-editor.css",
+		"build": "wp-scripts build --webpack-copy-php --blocks-manifest && pnpm run tw:build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php --blocks-manifest"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.16",
+		"@wordpress/scripts": "^30.26.0",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.16"
+	}
+}

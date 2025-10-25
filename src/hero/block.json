@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "parsnip-blocks/hero",
+  "title": "Hero",
+  "category": "design",
+  "icon": "cover-image",
+  "supports": { "html": false, "align": ["full"], "color": { "text": true }, "background": {
+    "color": true, "gradient": true, "fontSize": false
+  } },
+  "attributes": {
+    "option": { "type": "string", "default": "image" },
+    "mediaId": { "type": "number", "default": 0 },
+    "mediaUrl": { "type": "string", "default": "" },
+    "heading": { "type": "string", "default": "" },
+    "videoUrl": { "type": "string", "default": "" },
+    "videoUrlType": { "type": "string", "default": "mp4" },
+    "darkOverlay": { "type": "boolean", "default": true }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "style": "parsnip-blocks-shared"
+}
