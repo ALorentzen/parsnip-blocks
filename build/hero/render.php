@@ -5,7 +5,7 @@ $video_url = esc_url( $attributes['videoUrl'] ?? '' );
 $heading = wp_kses_post( $attributes['heading'] ?? '' );
 $dark = ! empty( $attributes['darkOverlay'] );
 ?>
-<section class="parsnip-hero alignfull relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+<section class="parsnip-hero alignfull relative h-screen w-full flex items-center justify-center px-6 overflow-hidden">
 	<?php if ( $option === 'image' && $media_url ) : ?>
 		<span class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image:url('<?php echo $media_url; ?>');"></span>
 	<?php elseif ( $option === 'video' && $video_url ) : ?>
@@ -14,5 +14,5 @@ $dark = ! empty( $attributes['darkOverlay'] );
 	<?php if ( $dark ) : ?>
 		<span class="absolute inset-0 bg-black/40"></span>
 	<?php endif; ?>
-	<h1 class="relative z-10 text-white text-5xl md:text-7xl text-center"><?php echo $heading; ?></h1>
+	<h1 class="absolute bottom-12 left-12 z-10 text-white text-5xl md:text-7xl"><?php echo $heading; ?></h1>
 </section>
